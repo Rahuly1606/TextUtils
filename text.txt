@@ -1,0 +1,14 @@
+<nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <h1>Hello, {name + last}</h1>
+    <div className="container">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quod repellendus magni amet libero repellat fugiat dolores in voluptatum id odit, iure assumenda rem, minus error officia suscipit perspiciatis. Eaque tempora commodi alias corrupti!
+    </div>
+    <div className="blank">
+      lovely
+    </div>
