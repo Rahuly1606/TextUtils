@@ -23,7 +23,7 @@ function App() {
     if (Mode === 'light') {
       setMode('dark');
       setText('Disable DarkMode');
-      document.body.style.backgroundColor = 'grey';
+      document.body.style.backgroundColor = '#223a5f';
       showAlert('Dark mode Enabled', 'success');
     } else {
       setMode('light');
@@ -47,7 +47,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-    </>
+    </> 
   );
 }
 

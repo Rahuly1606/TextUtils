@@ -47,19 +47,19 @@ export default function TextForm(props) {
                         value={text}
                         placeholder="Enter text here"
                         onChange={handleonChange}
-                        rows="6" style={{backgroundColor: props.mode === 'light'?'white':'grey', color: props.mode === 'light'?'black':'white'}}
+                        rows="6" style={{backgroundColor: props.mode === 'light'?'white':'#2024d4', color: props.mode === 'light'?'black':'white'}}
                     ></textarea>
                 </div>
-                <button className="btn btn-primary mx-2" onClick={uppercase}>Convert to Uppercase</button>
-                <button className="btn btn-primary mx-1" onClick={lowercase}>Convert to Lowercase</button>
-                <button className="btn btn-primary mx-1" onClick={clearcase}>Clear character</button>
-                <button className="btn btn-primary mx-1" onClick={reversewords}>reverse</button>
-                <button className="btn btn-primary mx-1" onClick={removeExtraspace}>Remove Extra space</button>
+                <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={uppercase}>Convert to Uppercase</button>
+                <button disabled={text.length===0}  className="btn btn-primary mx-1" onClick={lowercase}>Convert to Lowercase</button>
+                <button disabled={text.length===0} className="btn btn-primary mx-1" onClick={clearcase}>Clear character</button>
+                <button disabled={text.length===0} className="btn btn-primary mx-1" onClick={reversewords}>reverse</button>
+                <button disabled={text.length===0} className="btn btn-primary mx-1" onClick={removeExtraspace}>Remove Extra space</button>
             </div>
             <div className="container my-3" style={{color: props.mode === 'light'?'black':'white'}}>
                 <h1>Your Text Summary</h1>
-                <p>{text.split(" ").length} Words and {text.length} Characters</p>
-                <p>{0.008 * text.split(" ").length} minutes to Read</p>
+                <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} Words and {text.length} Characters</p>
+                <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} minutes to Read</p>
 
             {/* original.split('').reverse().join('') */}
            
